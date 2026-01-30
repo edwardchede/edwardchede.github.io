@@ -1,194 +1,343 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Edward Chede - About</title>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
-    <style>
-        body {
-            font-family: 'Roboto', sans-serif;
-            margin: 0;
-            padding: 0;
-            background-color: #f0f4f8;
-            color: #333;
-            line-height: 1.6;
-            opacity: 0;
-            transition: opacity 1s ease-in-out;
-        }
-        body.loaded {
-            opacity: 1;
-        }
-        header {
-            background-color: #007bff;
-            color: white;
-            padding: 60px 20px;
-            text-align: center;
-            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-        }
-        header h1 {
-            margin: 0;
-            font-size: 3em;
-        }
-        nav {
-            background-color: #333;
-            padding: 15px;
-            text-align: center;
-            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
-        }
-        nav a {
-            color: white;
-            margin: 0 20px;
-            text-decoration: none;
-            font-weight: bold;
-            transition: color 0.3s;
-        }
-        nav a:hover {
-            color: #00d4ff;
-        }
-        section {
-            padding: 60px 20px;
-            max-width: 1000px;
-            margin: 0 auto;
-            background-color: #ffffff;
-            border-radius: 10px;
-            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
-        }
-        h2 {
-            color: #007bff;
-            text-align: center;
-            margin-bottom: 40px;
-            font-size: 2.5em;
-        }
-        .profile-img {
-            display: block;
-            width: 200px;
-            height: 200px;
-            border-radius: 50%;
-            margin: 0 auto 30px;
-            box-shadow: 0 4px 8px rgba(0,0,0,0.2);
-            transition: transform 0.3s;
-        }
-        .profile-img:hover {
-            transform: scale(1.05);
-        }
-        p {
-            text-align: center;
-            max-width: 800px;
-            margin: 0 auto 20px;
-        }
-        ul.skills {
-            list-style-type: none;
-            padding: 0;
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: center;
-        }
-        ul.skills li {
-            background-color: #e7f3ff;
-            border: 1px solid #007bff;
-            border-radius: 20px;
-            padding: 8px 20px;
-            margin: 10px;
-            transition: background-color 0.3s;
-        }
-        ul.skills li:hover {
-            background-color: #007bff;
-            color: white;
-        }
-        footer {
-            background-color: #333;
-            color: white;
-            text-align: center;
-            padding: 20px;
-            margin-top: 40px;
-        }
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Edward Chede - Data Analyst | SQL, Power BI, Python | Cloud & BI Analytics | Microsoft Azure Certified </title>
 
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet"/>
 
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
 
-        .about-text {
-  max-width: 800px;
-  margin: 0 auto 40px;
-  text-align: left;
-  line-height: 1.8;
-  font-size: 1.05em;
-}
-        
+  <style>
+    :root {
+      --primary: #ffd43b;      /* Bright yellow headings */
+      --accent: #00ff9c;       /* GitHub links */
+      --dark: #0f1220;
+      --panel: #171a2e;
+      --text: #eaeaf0;
+      --gray: #9aa0c3;
+      --border: rgba(255,255,255,0.08);
+    }
 
-        @media (max-width: 768px) {
-            nav a {
-                display: block;
-                margin: 10px 0;
-            }
-        }
-    </style>
+    * { margin:0; padding:0; box-sizing:border-box; }
+
+    body {
+      font-family: 'Poppins', sans-serif;
+      background: var(--dark);
+      color: var(--text);
+      line-height: 1.6;
+    }
+
+    .container {
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 0 20px;
+    }
+
+    /* ===== HEADER ===== */
+    header {
+      border-bottom: 1px solid var(--border);
+      padding: 70px 20px 50px;
+      text-align: center;
+    }
+
+    .header-flex {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 25px;
+      flex-wrap: wrap;
+    }
+
+    .profile-img {
+      width: 150px;
+      height: 150px;
+      border-radius: 20%;
+      border: 3px solid var(--primary);
+      object-fit: cover;
+    }
+
+    header h1 {
+      font-size: 3rem;
+    }
+
+    header .title {
+      font-size: 1.3rem;
+      color: var(--gray);
+      margin: 10px 0 18px;
+    }
+
+    .contact-info {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 20px;
+      font-size: 1.05rem;
+    }
+
+    .social-links a {
+      color: var(--text);
+      font-size: 1.6rem;
+      margin: 0 12px;
+      transition: 0.3s;
+    }
+
+    .social-links a:hover {
+      color: var(--primary);
+      transform: translateY(-3px);
+    }
+
+    /* ===== MAIN LAYOUT ===== */
+    main {
+      display: grid;
+      grid-template-columns: 1fr 2fr;
+      gap: 40px;
+      padding: 60px 0;
+    }
+
+    aside, section {
+      background: var(--panel);
+      padding: 30px;
+      border-radius: 12px;
+      border: 1px solid var(--border);
+      margin-bottom: 30px;
+    }
+
+    aside {
+      height: fit-content;
+      position: sticky;
+      top: 40px;
+    }
+
+    h2 {
+      color: var(--primary);
+      font-size: 1.7rem;
+      margin-bottom: 20px;
+      border-bottom: 3px solid var(--primary);
+      padding-bottom: 6px;
+      display: inline-block;
+    }
+
+    ul {
+      list-style: none;
+    }
+
+    .skills li {
+      margin-bottom: 12px;
+      color: var(--accent);
+    }
+
+    .experience li, .projects li {
+      margin-bottom: 20px;
+    }
+
+    .date {
+      color: var(--gray);
+      font-size: 0.95rem;
+      font-style: italic;
+    }
+
+    /* ===== PROJECTS ===== */
+    .projects img {
+      width: 70%;
+      border-radius: 8px;
+      margin: 12px 0;
+    }
+
+    .github-link {
+      color: var(--accent);
+      font-weight: 500;
+    }
+
+    /* ===== ANIMATION ===== */
+    section {
+      opacity: 0;
+      transform: translateY(20px);
+      transition: 0.6s ease;
+    }
+
+    section.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    /* ===== MOBILE ===== */
+    @media (max-width: 992px) {
+      main { grid-template-columns: 1fr; }
+      aside { position: static; }
+    }
+
+    @media (max-width: 600px) {
+      header h1 { font-size: 2.4rem; }
+    }
+  </style>
 </head>
+
 <body>
 
-    <header>
-        <h1>Edward Chede</h1>
-        <p>AI Engineer • Data Scientist • Power BI Developer</p>
-    </header>
+<header>
+  <div class="container header-flex">
+    <img src="profile_Image.jpg" alt="Edward Chede" class="profile-img">
 
-    <nav>
-        <a href="index.html">About</a>
-        <a href="projects.html">Projects</a>
-        <a href="experience.html">Experience</a>
-        <a href="education.html">Education</a>
-        <a href="contact.html">Contact</a>
-    </nav>
+    <div>
+      <h1>Edward Chede</h1>
+      <p class="title"> Data Analyst | SQL, Power BI, Python | Cloud & BI Analytics | Microsoft Azure Certified</p>
 
-    <section id="about">
-        <h2>About</h2>
-        <img src="\profile_Image.jpg" alt="Edward Chede Profile" class="profile-img"> <!-- Replace with your actual profile image URL -->
+      <div class="contact-info">
+        <span><i class="fas fa-phone"></i> +44 743 652 4069</span>
+        <span><i class="fas fa-envelope"></i> edwardchede@gmail.com</span>
+      </div>
 
-        <div class="about-text">
-  <p>
-    I am a passionate Applied Data Science graduate with a strong foundation in AI Engineering, Machine Learning, Software 
-Development, and Business Intelligence. Driven by a commitment to leveraging data and advanced technologies, I aim to solve 
-complex real-world problems and deliver innovative, value-driven solutions.
-  </p>
+      <div class="social-links" style="margin-top:18px;">
+        <a href="https://www.linkedin.com/in/edward-chede-87a2852b3/" target="_blank"><i class="fab fa-linkedin"></i></a>
+        <a href="https://github.com/edwardchede" target="_blank"><i class="fab fa-github"></i></a>
+      </div>
+    </div>
+  </div>
+</header>
 
-  <p>
-    With hands-on expertise in Natural Language Processing (NLP), Machine Learning, Predictive Analytics, Data Visualization, and BI 
-tools, I bring hands-on expertise in translating complex datasets into actionable insights that support strategic decision-making and 
-enhance operational efficiency. Technically proficient across the end-to end data science pipeline from data acquisition and 
-wrangling to model development, evaluation, and deployment.
-  </p>
+<div class="container">
+  <main>
 
-  <p>
-    I excel in creating interactive dashboards and using data storytelling techniques to communicate insights effectively to both 
-technical and non-technical stakeholders. My strong communication and stakeholder engagement skills enable me to bridge the 
-gap between data and business needs, ensuring data-driven strategies are aligned with organizational goals.
-  </p>
+    <!-- LEFT SIDEBAR -->
+    <aside>
+      <section class="profile">
+        <h2>About Me</h2>
+        <p> I build cloud-enabled analytics and data-driven solutions that turn complex data into actionable insights. Highly skilled in SQL for querying, validating, and transforming complex datasets, with a strong focus on data quality, integrity, and compliance. Proven ability to analyse large datasets to uncover trends and patterns that support business growth and strategic decision-making.</p>
+        <p> Experienced in predictive analytics and machine/deep learning using Python, alongside designing intuitive, high-impact dashboards and reports in Power BI. Strong background in business intelligence, KPI development, and data modelling, with a track record of delivering clear, data-driven insights to both technical and non-technical stakeholders.  </p>
+      </section>
 
-  <p>
-    With a passion for continuous learning and innovation, I am eager to contribute to a forward-thinking team where I can apply my 
-skills to drive positive social and economic impact.
-  </p>
-</div>
-        <h3 style="text-align: center; color: #007bff;">Highlighted skills</h3>
+      <section>
+        <h2>Core Skills</h2>
         <ul class="skills">
-            <li>Python</li>
-            <li>Machine Learning</li>
-            <li>NLP</li>
-            <li>Power BI</li>
-            <li>JavaScript</li>
-            <li>SQL</li>
-            <li>LLM fine-tuning</li>
+          <li>SQL, Power BI, Advanced Microsoft Excel, Power Query</li>
+          <li>Python, JavaScript, HTML/CSS</li>
+          <li>Machine Learning & Predictive Analytics</li>
+          <li>Stakeholder Engagement & Reporting</li>
+          <li>Microsoft Azure & Databases</li>
         </ul>
-    </section>
+      </section>
+    </aside>
 
-    <footer>
-        <p>© Edward Chede — Built with HTML/CSS/JS • Hosted on GitHub Pages</p>
-    </footer>
+    <!-- MAIN CONTENT -->
+    <div>
 
-    <script>
-        // JavaScript for fade-in on page load
-        window.addEventListener('load', function() {
-            document.body.classList.add('loaded');
-        });
-    </script>
+      <section id="projects">
+        <h2>Projects</h2>
+        <ul class="projects">
+
+          <li>
+            <h3>Dementia Prevalence across NHS England | Jan 2026</h3>
+            <img src="Dementia_img.webp" alt="Dementia Project">
+            <p>Analysed dementia prevalence across NHS England to identify demographic, geographic, and care-setting inequalities. Used official NHS primary care data, the Power BI dashboard examined variation by age, sex, ethnicity, residential care status, NHS regions, and Integrated Care Boards (ICBs).</p>
+            <p>The objective was to translate complex healthcare data into actionable insights that support targeted service planning, equitable resource allocation, and evidence-based policy development.</p>
+            <a class="github-link" href="https://github.com/edwardchede/Dementia-Prevalence-across-NHS-England" target="_blank">View on GitHub</a>
+          </li>
+
+
+         <li>
+        <h3>AI Assistant for Course Planning and Development | May 2025</h3>
+            <img src="AI_agent.png" alt="Transport Project">
+             <p>Developed a context-aware academic planning assistant using a fine-tuned LLM I independently sourced and a hybrid RAG pipeline. The project addressed the limitations of generic AI tools by delivering a system tailored to Teesside university institutional framework. </p>
+            <a class="github-link" href="https://github.com/edwardchede/Missed-Hospital-Appointment_ML-Analysis" target="_blank">View on GitHub</a>
+          </li>
+
+          
+
+          <li>
+        <h3>Transportation Accessibility & Hospital Attendance-Redcar and Cleveland Voluntary Development Agency (RCVDA) | Dec 2024</h3>
+            <img src="hospital_transport.png" alt="Transport Project">
+            <p>Analysed the impact of transportation accessibility on missed and cancelled hospital appointments using machine learning and Power Bi for the Redcar and Cleveland community. Identified key barriers and delivered data-driven recommendations to improve service utilisation.</p>
+            <a class="github-link" href="https://github.com/edwardchede/Missed-Hospital-Appointment_ML-Analysis" target="_blank">View on GitHub</a>
+          </li>
+
+          <li>
+            <h3>Targeted Online Marketing – Tourism | May 2024</h3>
+            <img src="target_marketing.jpg" alt="Tourism Project">
+            <p>Applied machine learning algorithms to optimise targeted marketing strategies for an online tourism website, enhancing customer engagement and increasing sales through more precise advertisement delivery..</p>
+            <a class="github-link" href="https://github.com/edwardchede/MachineLearning_TargetedMarketing" target="_blank">View on GitHub</a>
+          </li>
+
+        </ul>
+      </section>
+
+      <section id="experience">
+        <h2>Work Experience</h2>
+        <ul class="experience">
+          <li>
+            <h3>Community Research Intern – Redcar and Cleveland Voluntary Development Agency (RCVDA)</h3>
+            <p class="date">Sep 2024 – Dec 2024</p>
+            <p> Analysed hospital appointment attendance and transport accessibility using machine learning and Power Bi, identified key 
+                 barriers and presented data-driven recommendations to improve service utilisation. </p>
+          </li>
+          <li>
+            <h3>Business Intelligence Intern — University Hospital of North Tee, NHS Foundation Trust: </h3>
+            <p class="date">Jul 2024</p>
+            <P> Built Power BI dashboards, prepared and validated datasets, completed exploratory analysis and delivered insights 
+                 supporting clinical and operational reporting. </P>
+          </li>
+
+           <li>
+            <h3>Student Engagement Assistant — Teesside University: </h3>
+            <p class="date">May 2024 – Jul 2025</p>
+            <P> Contributed to student-centred improvement of Student Life and Library services by co-creating resources and providing 
+              proactive peer, digital, and roving support that strengthened student engagement and community connections.  </P>
+          </li>
+
+
+              <li>
+            <h3>Data Warehouse & Analytics — United Bank for Africa: </h3>
+            <p class="date">Jun 2018 – Sep 2023</p>
+            <P>  Produced dashboards and management reports for senior leadership, analysed multi-year financial data, validated data 
+                quality and streamlined reporting workflows. </P>
+          </li>
+
+
+              <li>
+            <h3>Customer Experience & Digital Banking Support — United Bank for Africa: </h3>
+            <p class="date">Jun 2013 – May 2018</p>
+            <P>:  Delivered exceptional customer service by providing seamless onboarding, proactively resolving and escalating issues, 
+                  and promoting digital banking solutions to enhance customer satisfaction and adoption..  </P>
+          </li>
+
+
+              <li>
+            <h3>Customer Assistant — Wm Morrison Supermarkets Ltd: </h3>
+            <p class="date">Dec 2023 – Present</p>
+            <P> Developed communication and problem-solving skills in a fast-paced customer environment.  </P>
+          </li>
+
+        </ul>
+      </section>
+
+      <section id="education">
+        <h2>Education & Certifications</h2>
+        <ul>
+          <li>MSc Applied Data Science – Teesside University ( Jun 2025)</li>
+          <li>DP-900 Azure Data Fundamentals – Microsoft ( Dec 2025)</li>
+          <li>MS-900 Microsoft 365 Fundamentals – Microsoft ( Dec 2025)</li>
+          <li>BSc Biochemistry — Tansian University ( Jul 2016) </li>
+
+        </ul>
+      </section>
+
+    </div>
+  </main>
+</div>
+
+<script>
+  const sections = document.querySelectorAll("section");
+  const observer = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) entry.target.classList.add("visible");
+    });
+  }, { threshold: 0.15 });
+
+  sections.forEach(sec => observer.observe(sec));
+</script>
 
 </body>
 </html>
