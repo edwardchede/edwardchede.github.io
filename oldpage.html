@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Edward Chede - About</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+
+<style>
+:root {
+  --primary: #007bff;
+  --secondary: #00d4ff;
+  --dark: #1f2933;
+  --light-bg: #f0f4f8;
+  --card-bg: #ffffff;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    background: linear-gradient(135deg, #e0f7ff, #f0f4f8); /* soft gradient */
+    color: #333;
+    line-height: 1.7;
+    opacity: 0;
+    transition: opacity 1s ease-in-out;
+}
+
+body.loaded {
+  opacity: 1;
+}
+
+/* ===== HEADER ===== */
+header {
+  background: linear-gradient(135deg, var(--primary), var(--secondary));
+  color: white;
+  padding: 90px 20px;
+  text-align: center;
+}
+
+header h1 {
+  font-size: 3.2em;
+  margin-bottom: 10px;
+  letter-spacing: 1px;
+}
+
+header p {
+  font-size: 1.1em;
+  opacity: 0.95;
+}
+
+/* ===== NAV ===== */
+nav {
+  background: #111827;
+  padding: 15px;
+  text-align: center;
+  position: sticky;
+  top: 0;
+  z-index: 10;
+}
+
+nav a {
+  color: #e5e7eb;
+  margin: 0 18px;
+  text-decoration: none;
+  font-weight: 500;
+  position: relative;
+}
+
+nav a::after {
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 2px;
+  background: var(--secondary);
+  left: 0;
+  bottom: -5px;
+  transition: width 0.3s;
+}
+
+nav a:hover::after {
+  width: 100%;
+}
+
+/* ===== SECTION CARD ===== */
+section {
+  max-width: 1000px;
+  margin: 80px auto;
+  padding: 70px 40px;
+  background: var(--card-bg);
+  border-radius: 14px;
+  box-shadow: 0 20px 40px rgba(0,0,0,0.08);
+}
+
+/* ===== HEADINGS ===== */
+h2 {
+  text-align: center;
+  font-size: 2.6em;
+  color: var(--primary);
+  margin-bottom: 50px;
+}
+
+h3 {
+  margin-bottom: 15px;
+  color: var(--dark);
+}
+
+/* ===== PROFILE IMAGE ===== */
+.profile-img {
+  display: block;
+  width: 210px;
+  height: 210px;
+  border-radius: 50%;
+  margin: 0 auto 35px;
+  border: 6px solid #fff;
+  box-shadow: 0 12px 30px rgba(0,0,0,0.25);
+  transition: transform 0.4s ease;
+}
+
+.profile-img:hover {
+  transform: translateY(-6px) scale(1.05);
+}
+
+/* ===== ABOUT TEXT ===== */
+.about-text {
+  max-width: 850px;
+  margin: 0 auto 50px;
+  font-size: 1.05em;
+  color: #374151;
+}
+
+/* ===== SKILLS ===== */
+.skills {
+  list-style: none;
+  padding: 0;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 15px;
+}
+
+.skills li {
+  background: linear-gradient(135deg, #e7f3ff, #f8fbff);
+  border-left: 4px solid var(--primary);
+  padding: 15px 18px;
+  border-radius: 10px;
+  font-size: 0.95em;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.skills li:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+}
+
+/* ===== FOOTER ===== */
+footer {
+  background: #111827;
+  color: #d1d5db;
+  text-align: center;
+  padding: 25px;
+  font-size: 0.9em;
+}
+
+/* ===== MOBILE ===== */
+@media (max-width: 768px) {
+  section {
+    padding: 50px 25px;
+    margin: 40px 15px;
+  }
+
+  nav a {
+    display: inline-block;
+    margin: 8px 12px;
+  }
+}
+</style>
+</head>
+
+<body>
+
+<header>
+  <h1>Edward Chede</h1>
+  <p>Data Analyst | SQL • Power BI • Python | Microsoft Azure Certified • Cloud & BI Analytics</p>
+</header>
+
+<nav>
+  <a href="index.html">About</a>
+  <a href="projects.html">Projects</a>
+  <a href="experience.html">Experience</a>
+  <a href="education.html">Education</a>
+  <a href="contact.html">Contact</a>
+</nav>
+
+<section>
+  <h2>About Me</h2>
+
+  <img src="profile_Image.jpg" alt="Edward Chede Profile" class="profile-img">
+
+  <div class="about-text">
+    <h3>Professional Summary</h3>
+    <p>
+      I am a Data and Business Analyst with cross-sector experience in healthcare,
+      education, and financial services. I specialize in SQL-driven analytics,
+      predictive modeling with Python, and building impactful Power BI dashboards.
+      My work focuses on turning complex data into actionable insights that support
+      strategic decision-making for both technical and non-technical stakeholders.
+    </p>
+  </div>
+
+  <h3 style="text-align:center; color: var(--primary);">Core Skills</h3>
+
+  <ul class="skills">
+    <li><strong>BI & Analytics:</strong> SQL, Power BI, Advanced Excel, Power Query</li>
+    <li><strong>Data Analysis:</strong> KPI design, data modeling, exploratory analysis</li>
+    <li><strong>Programming:</strong> Python (pandas, numpy, scikit-learn), HTML/CSS, JavaScript</li>
+    <li><strong>Business:</strong> Stakeholder engagement, insight storytelling</li>
+    <li><strong>Cloud:</strong> Microsoft Azure, relational & non-relational databases</li>
+  </ul>
+</section>
+
+<footer>
+  <p>© Edward Chede — Built with HTML/CSS/JS • Hosted on GitHub Pages</p>
+</footer>
+
+<script>
+window.addEventListener('load', () => {
+  document.body.classList.add('loaded');
+});
+</script>
+
+</body>
+</html>
