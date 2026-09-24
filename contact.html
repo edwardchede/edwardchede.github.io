@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Edward Chede - Contact</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+    <style>
+        :root {
+          --ink: #10192B;
+          --paper: #F6F8FB;
+          --card: #FFFFFF;
+          --line: #E3E8F0;
+          --muted: #5B6472;
+          --accent: #2E5EEA;
+          --accent-2: #0EA99B;
+        }
+        * { box-sizing: border-box; }
+        body {
+            font-family: 'Inter', sans-serif;
+            margin: 0;
+            background: var(--paper);
+            color: #22293A;
+            line-height: 1.6;
+            opacity: 0;
+            transition: opacity 0.8s ease-in-out;
+        }
+        body.loaded { opacity: 1; }
+        h1, h2, h3 { font-family: 'Space Grotesk', sans-serif; margin: 0; }
+        .page-header {
+            background: var(--ink);
+            background-image: radial-gradient(rgba(255,255,255,0.06) 1px, transparent 1px);
+            background-size: 22px 22px;
+            color: #fff;
+            padding: 70px 20px;
+            text-align: center;
+        }
+        .page-header h1 { font-size: 2.6em; font-weight: 700; margin-bottom: 10px; }
+        .page-header p { color: #AEB9CC; font-size: 1.05em; margin: 0; }
+        nav {
+            background: var(--ink);
+            padding: 16px;
+            text-align: center;
+            position: sticky;
+            top: 0;
+            z-index: 10;
+        }
+        nav a {
+            color: #C6CEDC;
+            margin: 0 18px;
+            text-decoration: none;
+            font-weight: 500;
+            font-size: 0.95em;
+            padding-bottom: 4px;
+            border-bottom: 2px solid transparent;
+            transition: color 0.25s, border-color 0.25s;
+        }
+        nav a:hover { color: #ffffff; }
+        nav a.active { color: #ffffff; border-bottom-color: var(--accent-2); }
+        section {
+            max-width: 700px;
+            margin: 60px auto;
+            padding: 60px 40px;
+            background: var(--card);
+            border: 1px solid var(--line);
+            border-radius: 12px;
+            text-align: center;
+        }
+        .section-head { display: flex; flex-direction: column; align-items: center; gap: 10px; margin-bottom: 30px; }
+        .section-head .bar { width: 40px; height: 4px; border-radius: 3px; background: var(--accent-2); }
+        .section-head h2 { font-size: 2em; font-weight: 600; color: var(--ink); }
+        section p { color: var(--muted); margin: 8px 0; }
+        ul.links {
+            list-style-type: none;
+            padding: 0;
+            margin: 26px 0 10px;
+        }
+        ul.links li { display: inline-block; margin: 0 10px; }
+        ul.links a {
+            display: inline-block;
+            color: var(--accent);
+            border: 1px solid var(--line);
+            padding: 10px 20px;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: border-color 0.2s, transform 0.2s;
+        }
+        ul.links a:hover { border-color: var(--accent); transform: translateY(-2px); }
+        footer {
+            background: var(--ink);
+            color: #AEB9CC;
+            text-align: center;
+            padding: 26px;
+            font-size: 0.9em;
+        }
+        @media (max-width: 768px) {
+            nav a { display: inline-block; margin: 6px 10px; }
+            section { padding: 50px 24px; margin: 40px 16px; }
+        }
+    </style>
+</head>
+<body>
+
+    <nav>
+        <a href="index.html">About</a>
+        <a href="projects.html">Projects</a>
+        <a href="experience.html">Experience</a>
+        <a href="education.html">Education</a>
+        <a href="contact.html" class="active">Contact</a>
+    </nav>
+
+    <header class="page-header">
+        <h1>Edward Chede</h1>
+        <p>Data Scientist • Machine Learning • Python • SQL • Power BI Developer</p>
+    </header>
+
+    <section id="contact">
+        <div class="section-head"><span class="bar"></span><h2>Contact</h2></div>
+        <p>Middlesbrough, United Kingdom</p>
+        <p>+44 743 652 4069</p>
+        <p>edwardchede@gmail.com</p>
+        <ul class="links">
+            <li><a href="https://www.linkedin.com/in/edward-chede-87a2852b3/" target="_blank">LinkedIn</a></li>
+            <li><a href="https://github.com/edwardchede" target="_blank">GitHub</a></li>
+        </ul>
+        <p>References: Available on request.</p>
+    </section>
+
+    <footer>
+        <p>© Edward Chede — Built with HTML/CSS/JS • Hosted on GitHub Pages</p>
+    </footer>
+
+    <script>
+        window.addEventListener('load', function() {
+            document.body.classList.add('loaded');
+        });
+    </script>
+
+</body>
+</html>

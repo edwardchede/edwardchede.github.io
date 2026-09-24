@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Edward Chede - Projects</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --ink: #10192B;
+      --paper: #F6F8FB;
+      --card: #FFFFFF;
+      --line: #E3E8F0;
+      --muted: #5B6472;
+      --accent: #2E5EEA;
+      --accent-2: #0EA99B;
+    }
+    * { box-sizing: border-box; }
+    body {
+      font-family: 'Inter', sans-serif;
+      margin: 0;
+      background: var(--paper);
+      color: #22293A;
+      line-height: 1.6;
+      opacity: 0;
+      transition: opacity 0.8s ease-in-out;
+    }
+    body.loaded { opacity: 1; }
+    h1, h2, h3 { font-family: 'Space Grotesk', sans-serif; margin: 0; }
+    .page-header {
+      background: var(--ink);
+      background-image: radial-gradient(rgba(255,255,255,0.06) 1px, transparent 1px);
+      background-size: 22px 22px;
+      color: #fff;
+      padding: 70px 20px;
+      text-align: center;
+    }
+    .page-header h1 { font-size: 2.6em; font-weight: 700; margin-bottom: 10px; }
+    .page-header p { color: #AEB9CC; font-size: 1.05em; margin: 0; }
+    nav {
+      background: var(--ink);
+      padding: 16px;
+      text-align: center;
+      position: sticky;
+      top: 0;
+      z-index: 10;
+    }
+    nav a {
+      color: #C6CEDC;
+      margin: 0 18px;
+      text-decoration: none;
+      font-weight: 500;
+      font-size: 0.95em;
+      padding-bottom: 4px;
+      border-bottom: 2px solid transparent;
+      transition: color 0.25s, border-color 0.25s;
+    }
+    nav a:hover { color: #ffffff; }
+    nav a.active { color: #ffffff; border-bottom-color: var(--accent-2); }
+    section {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 80px 24px;
+    }
+    .section-head { display: flex; align-items: center; gap: 14px; margin-bottom: 44px; }
+    .section-head .bar { width: 6px; height: 32px; border-radius: 3px; background: var(--accent-2); flex-shrink: 0; }
+    .section-head h2 { font-size: 2em; font-weight: 600; color: var(--ink); }
+
+    .projects-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+      gap: 26px;
+    }
+
+    .project-item {
+      background: var(--card);
+      border: 1px solid var(--line);
+      border-radius: 10px;
+      padding: 22px;
+      transition: transform 0.2s, border-color 0.2s;
+      display: flex;
+      flex-direction: column;
+    }
+    .project-item:hover { transform: translateY(-4px); border-color: var(--accent); }
+
+    .project-img {
+      width: 100%;
+      height: 190px;
+      object-fit: cover;
+      border-radius: 8px;
+      margin-bottom: 18px;
+    }
+    .project-tile {
+      width: 100%;
+      height: 190px;
+      border-radius: 8px;
+      margin-bottom: 18px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: linear-gradient(135deg, var(--accent), var(--accent-2));
+    }
+    .project-tile svg {
+      width: 56px;
+      height: 56px;
+      stroke: #ffffff;
+      fill: none;
+      stroke-width: 1.6;
+    }
+    h3 { color: var(--ink); font-size: 1.1em; font-weight: 600; margin-bottom: 10px; }
+    .project-item p { color: var(--muted); margin: 0 0 12px; font-size: 0.95em; }
+    .tags { display: flex; flex-wrap: wrap; gap: 6px; margin-bottom: 12px; }
+    .tag {
+      background: rgba(46, 94, 234, 0.08);
+      color: var(--accent);
+      font-size: 0.78em;
+      font-weight: 600;
+      padding: 4px 10px;
+      border-radius: 20px;
+    }
+    .project-item a {
+      margin-top: auto;
+      color: var(--accent-2);
+      font-weight: 600;
+      text-decoration: none;
+      font-size: 0.92em;
+    }
+    .project-item a:hover { text-decoration: underline; }
+    footer {
+      background: var(--ink);
+      color: #AEB9CC;
+      text-align: center;
+      padding: 26px;
+      font-size: 0.9em;
+    }
+    @media (max-width: 768px) {
+      nav a { display: inline-block; margin: 6px 10px; }
+      section { padding: 56px 20px; }
+    }
+  </style>
+</head>
+<body>
+
+  <nav>
+    <a href="index.html">About</a>
+    <a href="projects.html" class="active">Projects</a>
+    <a href="experience.html">Experience</a>
+    <a href="education.html">Education</a>
+    <a href="contact.html">Contact</a>
+  </nav>
+
+  <header class="page-header">
+    <h1>Edward Chede</h1>
+    <p>Data Scientist • Machine Learning • Python • SQL • Power BI Developer</p>
+  </header>
+
+  <section id="projects">
+    <div class="section-head"><span class="bar"></span><h2>Projects</h2></div>
+    <div class="projects-grid">
+
+      <div class="project-item">
+        <img src="AI_agent.png" alt="Agentic AI Assistant for Academic Course Planning" class="project-img">
+        <h3>Agentic AI Assistant for Academic Course Planning — Teesside University</h3>
+        <p>Fine-tuned a Llama-3.2-3B-Instruct model on institutional course specification data using LoRA and 4-bit quantisation, then built a hybrid retrieval-augmented generation pipeline (FAISS + BM25) with an agentic decision layer that dynamically chose whether to retrieve, generate, or enhance responses. Achieved a 1.00 Hits@3 retrieval accuracy, a 0.00 hallucination rate, and an average human evaluation score of 8.25/10 for relevance, fluency, and completeness. Completed May 2025.</p>
+        <div class="tags"><span class="tag">Python</span><span class="tag">Llama-3.2</span><span class="tag">LoRA</span><span class="tag">FAISS</span><span class="tag">BM25</span><span class="tag">RAG</span><span class="tag">Gradio</span></div>
+        <a href="https://github.com/edwardchede/AI_Agent_for_Course_Planning_and_Development" target="_blank">View on GitHub</a>
+      </div>
+
+      <div class="project-item">
+        <img src="hospital_transport.png" alt="Transportation Accessibility and Patient Attendance" class="project-img">
+        <h3>Transportation Accessibility and Patient Attendance</h3>
+        <p>Combined NHS attendance, government travel-time, and Index of Multiple Deprivation datasets to investigate drivers of missed hospital appointments. Applied K-means clustering to group areas by travel time and deprivation, finding that transport accessibility was a significant driver for one high-travel-time cluster while deprivation was the stronger driver overall, informing targeted service-planning recommendations. Completed December 2024.</p>
+        <div class="tags"><span class="tag">Python</span><span class="tag">scikit-learn</span><span class="tag">K-means</span><span class="tag">Power BI</span></div>
+        <a href="https://github.com/edwardchede/Missed-Hospital-Appointment_ML-Analysis" target="_blank">View on GitHub</a>
+      </div>
+
+      <div class="project-item">
+        <img src="data_pipeline.webp" alt="NHS A&E Data Warehouse and Performance Analytics" class="project-img">
+        <h3>NHS A&E Data Warehouse and Performance Analytics</h3>
+        <p>Designed and built an end-to-end analytics engineering pipeline processing twelve months of NHS England A&E attendance data. Developed a Python ETL pipeline (pandas, SQLAlchemy) to extract, clean, and validate monthly data, loading it into a three-layer PostgreSQL medallion architecture modelled as a dimensional star schema with an upsert pattern for revised source data. Built a reusable SQL validation suite and delivered a Power BI dashboard finding that Major Emergency Departments account for over 99.5% of national emergency admissions and consistently underperform against the four-hour treatment target.</p>
+        <div class="tags"><span class="tag">Python</span><span class="tag">PostgreSQL</span><span class="tag">SQL</span><span class="tag">Power BI</span><span class="tag">ETL</span></div>
+        <a href="https://github.com/edwardchede/nhs-ae-data-warehouse" target="_blank">View on GitHub</a>
+      </div>
+
+      <div class="project-item">
+        <img src="target_marketing.jpg" alt="ML for Targeted Online Marketing" class="project-img">
+        <h3>Optimising Targeted Marketing for an Online Tourism Website</h3>
+        <p>Built and compared seven classification models, including Logistic Regression, Random Forest, and XGBoost, to predict purchase propensity from website engagement data. Addressed class imbalance with SMOTE and tuned models via GridSearch and Optuna, prioritising precision over recall to minimise wasted ad spend on uninterested customers. Completed May 2024.</p>
+        <div class="tags"><span class="tag">Python</span><span class="tag">scikit-learn</span><span class="tag">XGBoost</span><span class="tag">SMOTE</span></div>
+        <a href="https://github.com/edwardchede/MachineLearning_TargetedMarketing" target="_blank">View on GitHub</a>
+      </div>
+
+      <div class="project-item">
+        <img src="gender_bias.webp" alt="Identification of Gender Bias in an AI Model for Bank Churn Prediction" class="project-img">
+        <h3>Identification of Gender Bias in an AI Model for Bank Churn Prediction</h3>
+        <p>Trained an SVM classifier to predict bank customer churn, then audited it for gender bias using accuracy, precision, recall, and positive-rate metrics across demographic groups. Identified a significant fairness gap (recall of 0.49 for male customers vs. 0.86 for female customers) that accuracy alone did not reveal, and evaluated the effect of SMOTE resampling on the underlying gender balance of the training data.</p>
+        <div class="tags"><span class="tag">Python</span><span class="tag">scikit-learn</span><span class="tag">SVM</span><span class="tag">SMOTE</span><span class="tag">Fairness Metrics</span></div>
+        <a href="https://github.com/edwardchede/Dementia-Prevalence-across-NHS-England" target="_blank">View on GitHub</a>
+      </div>
+
+      <div class="project-item">
+        <img src="Dementia_img.webp" alt="Dementia Prevalence across NHS England dashboard" class="project-img">
+        <h3>Exploring Demographic and Regional Inequalities in Dementia Prevalence across NHS England</h3>
+        <p>Analysed dementia prevalence across NHS England to identify demographic, geographic, and care-setting inequalities. Using official NHS primary care data, the Power BI dashboard examines variation by age, sex, ethnicity, residential care status, NHS regions, and Integrated Care Boards (ICBs), translating complex healthcare data into insights that support targeted service planning and evidence-based policy development. Completed January 2026.</p>
+        <div class="tags"><span class="tag">Power BI</span><span class="tag">DAX</span><span class="tag">Data Modelling</span></div>
+        <a href="https://github.com/edwardchede/Identification-of-Gender-Bias-in-AI-Model" target="_blank">View on GitHub</a>
+      </div>
+
+    </div>
+  </section>
+
+  <footer>
+    <p>© Edward Chede — Built with HTML/CSS/JS • Hosted on GitHub Pages</p>
+  </footer>
+
+  <script>
+    window.addEventListener('load', function() {
+      document.body.classList.add('loaded');
+    });
+  </script>
+
+</body>
+</html>

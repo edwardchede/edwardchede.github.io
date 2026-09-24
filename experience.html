@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Edward Chede - Experience</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+    <style>
+        :root {
+          --ink: #10192B;
+          --paper: #F6F8FB;
+          --card: #FFFFFF;
+          --line: #E3E8F0;
+          --muted: #5B6472;
+          --accent: #2E5EEA;
+          --accent-2: #0EA99B;
+        }
+        * { box-sizing: border-box; }
+        body {
+            font-family: 'Inter', sans-serif;
+            margin: 0;
+            background: var(--paper);
+            color: #22293A;
+            line-height: 1.6;
+            opacity: 0;
+            transition: opacity 0.8s ease-in-out;
+        }
+        body.loaded { opacity: 1; }
+        h1, h2, h3 { font-family: 'Space Grotesk', sans-serif; margin: 0; }
+        .page-header {
+            background: var(--ink);
+            background-image: radial-gradient(rgba(255,255,255,0.06) 1px, transparent 1px);
+            background-size: 22px 22px;
+            color: #fff;
+            padding: 70px 20px;
+            text-align: center;
+        }
+        .page-header h1 { font-size: 2.6em; font-weight: 700; margin-bottom: 10px; }
+        .page-header p { color: #AEB9CC; font-size: 1.05em; margin: 0; }
+        nav {
+            background: var(--ink);
+            padding: 16px;
+            text-align: center;
+            position: sticky;
+            top: 0;
+            z-index: 10;
+        }
+        nav a {
+            color: #C6CEDC;
+            margin: 0 18px;
+            text-decoration: none;
+            font-weight: 500;
+            font-size: 0.95em;
+            padding-bottom: 4px;
+            border-bottom: 2px solid transparent;
+            transition: color 0.25s, border-color 0.25s;
+        }
+        nav a:hover { color: #ffffff; }
+        nav a.active { color: #ffffff; border-bottom-color: var(--accent-2); }
+        section {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 80px 24px;
+        }
+        .section-head { display: flex; align-items: center; gap: 14px; margin-bottom: 44px; }
+        .section-head .bar { width: 6px; height: 32px; border-radius: 3px; background: var(--accent-2); flex-shrink: 0; }
+        .section-head h2 { font-size: 2em; font-weight: 600; color: var(--ink); }
+        .experience-item {
+            background: var(--card);
+            border: 1px solid var(--line);
+            border-left: 3px solid var(--accent);
+            border-radius: 8px;
+            padding: 24px 26px;
+            margin-bottom: 20px;
+            transition: transform 0.2s, border-color 0.2s;
+        }
+        .experience-item:hover { transform: translateY(-2px); border-color: var(--accent); }
+        .experience-item.current { border-left-color: var(--accent-2); }
+        .current-tag {
+            display: inline-block;
+            background: rgba(14, 169, 155, 0.12);
+            color: #0B8377;
+            font-size: 0.75em;
+            font-weight: 600;
+            padding: 3px 10px;
+            border-radius: 20px;
+            margin-bottom: 10px;
+        }
+        h3 { font-size: 1.15em; font-weight: 600; margin-bottom: 12px; color: var(--ink); }
+        .experience-item p { color: var(--muted); margin: 0; }
+        footer {
+            background: var(--ink);
+            color: #AEB9CC;
+            text-align: center;
+            padding: 26px;
+            font-size: 0.9em;
+        }
+        @media (max-width: 768px) {
+            nav a { display: inline-block; margin: 6px 10px; }
+            section { padding: 56px 20px; }
+        }
+    </style>
+</head>
+<body>
+
+    <nav>
+        <a href="index.html">About</a>
+        <a href="projects.html">Projects</a>
+        <a href="experience.html" class="active">Experience</a>
+        <a href="education.html">Education</a>
+        <a href="contact.html">Contact</a>
+    </nav>
+
+    <header class="page-header">
+        <h1>Edward Chede</h1>
+        <p>Data Scientist • Machine Learning • Python • SQL • Power BI Developer</p>
+    </header>
+
+    <section id="experience">
+        <div class="section-head"><span class="bar"></span><h2>Experience</h2></div>
+
+        <div class="experience-item current">
+            <span class="current-tag">Current</span>
+            <h3>Feb 2026 — Present: Health Advisor — Practice Plus Group</h3>
+            <p>Collect, assess and interpret patient data using the NHS Pathways clinical decision-support system to drive evidence-based
+triage outcomes. Analyse high-volume inbound data patterns to route cases to appropriate care pathways using structured clinical
+frameworks. Maintain accurate, confidential patient records in compliance with GDPR and clinical governance standards, and identify
+and escalate critical risk signals in a live operational environment.</p>
+        </div>
+
+        <div class="experience-item">
+            <h3>Sep 2024 — Dec 2024: Community Research Intern — Redcar & Cleveland Voluntary Development Agency (RCVDA)</h3>
+            <p>Applied K-means clustering to appointment, travel-time and deprivation data to identify service accessibility gaps across a
+local authority area, directly informing resource-planning decisions. Combined multiple open-government and NHS datasets at LSOA
+level to preserve patient privacy while enabling location-based analysis, and produced interactive Power BI dashboards and reports
+that translated machine learning findings into practical recommendations for non-technical stakeholders.</p>
+        </div>
+
+        <div class="experience-item">
+            <h3>Jul 2024: Business Intelligence Intern — University Hospital of North Tees (NHS Foundation Trust)</h3>
+            <p>Prepared, validated and maintained datasets supporting operational and clinical performance reporting across
+interconnected data sources. Built and maintained Power BI dashboards tracking key performance metrics, enabling senior leaders to
+monitor service delivery in near real time, and collaborated with clinical and operational stakeholders to gather reporting
+requirements and deliver accurate, timely outputs.</p>
+        </div>
+
+        <div class="experience-item">
+            <h3>May 2024 — Jul 2025: Student Engagement Assistant (Part Time) — Teesside University</h3>
+            <p>Contributed to continuous service improvement within Student Life and Library services. Co-created resources and services
+with a student-centric approach, maintained accurate student records, and provided proactive peer support including digital skills
+guidance and roving support across student communities.</p>
+        </div>
+
+        <div class="experience-item">
+            <h3>Dec 2023 — Aug 2026: Customer Assistant — Wm Morrison Supermarkets Ltd</h3>
+            <p>Worked in a fast-paced environment requiring strong multitasking and organisation. Delivered excellent customer service,
+managed stock and maintained store organisation, and handled special requests and complaints while ensuring compliance with
+regulated products.</p>
+        </div>
+
+        <div class="experience-item">
+            <h3>Jun 2018 — Sep 2023: Business Assurance Officer — UBA plc</h3>
+            <p>Performed data validation and control checks on large datasets using SQL, ensuring accuracy, completeness and regulatory
+compliance across business operations. Developed and maintained Power BI dashboards monitoring key risk indicators and control
+effectiveness for senior management, produced assurance reports highlighting discrepancies and risk exposures, and conducted
+reconciliations and exception analysis that improved data transparency across business units.</p>
+        </div>
+
+    </section>
+
+    <footer>
+        <p>© Edward Chede — Built with HTML/CSS/JS • Hosted on GitHub Pages</p>
+    </footer>
+
+    <script>
+        window.addEventListener('load', function() {
+            document.body.classList.add('loaded');
+        });
+    </script>
+
+</body>
+</html>
